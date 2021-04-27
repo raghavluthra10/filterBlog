@@ -1,0 +1,49 @@
+.App{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(103, 103, 241);
+}
+
+.navbar__menuItems {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.navbar__menuItems > li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navbar__menuIcon{
+  position: absolute;
+  right: 50px;
+  top: 5px;
+  display: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .navbar__menuItems {
+    display: none;
+  }
+
+  .navbar__menuIcon {
+    display: flex;
+  }
+
+  .navbar__menuItems.active {
+    background-color: rgb(103, 103, 241);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 250px;    
+  }
+
+  .navbar__menuItems > li {
+    align-self: center;
+    width: 100%;
+  }
+}
